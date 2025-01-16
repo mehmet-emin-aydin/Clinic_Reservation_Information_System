@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="MehmetEminAydin_20011011" default="default" basedir=".">
+    <description>Builds, tests, and runs the project MehmetEminAydin_20011011.</description>
+    <import file="nbproject/build-impl.xml"/>
+
+    <target name="-post-jar">
+        <!-- Tek bir JAR dosyası oluştur (Fat JAR) -->
+        <jar destfile="${dist.dir}/MehmetEminAydin_20011011-fat.jar" filesetmanifest="merge">
+            <!-- Ana projenin class dosyaları -->
+            <fileset dir="${build.classes.dir}"/>
+            
+            <!-- Tüm bağımlı JAR'ların içeriğini ekle -->
+            <zipgroupfileset dir="C:\Users\MEHMETEMINAYDIN\Downloads\lib" includes="*.jar"/>
+            
+            <manifest>
+                <attribute name="Main-Class" value="MehmetEminAydin.Main"/>
+            </manifest>
+        </jar>
+    </target>
+</project>
